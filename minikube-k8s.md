@@ -439,7 +439,7 @@ spec:
 
    
 
-#### 部署Ingress Controller
+### 部署Ingress Controller
 
 **安装请不要相信网上其他人的步骤操作，基本上你安装不成功**
 
