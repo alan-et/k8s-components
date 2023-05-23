@@ -95,7 +95,7 @@ helm version
 
 保存退出，然后执行
 
-`source ~/.bash_profile`
+`source /etc/profile`
 
 换一个国内能访问的代理地址： https://goproxy.cn
 
