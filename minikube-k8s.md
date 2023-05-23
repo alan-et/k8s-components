@@ -352,7 +352,7 @@ nohup kubectl proxy --address='0.0.0.0' --accept-hosts='^*$' &
 
 然后浏览器打开(可以用前面配置的域名访问)
 
-`https://localhost:8002/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/`控制台,选择token登入
+`https://localhost:8002/`控制台,选择token登入
 
 ##### nodeport模式访问
 
@@ -360,7 +360,7 @@ nohup kubectl proxy --address='0.0.0.0' --accept-hosts='^*$' &
 
 然后浏览器打开
 
-`https://localhost:31001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/`控制台,选择token登入
+`https://localhost:31001/`控制台,选择token登入
 
 ##### 通过ingress访问
 
@@ -434,6 +434,8 @@ spec:
    
 
 3. （minikube创建的集群，只能本地访问，hosts文件设置域名解析）直接域名访问即可
+![image](https://github.com/alan-et/k8s-components/assets/46310121/97cc9d77-d5b9-46a9-bf9c-726a3bf4e497)
+
 
    
 
