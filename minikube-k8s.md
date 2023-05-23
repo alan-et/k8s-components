@@ -96,7 +96,7 @@ helm version
 `go env -w GOPROXY=https://goproxy.cn`
 
 方式二: 直接下载压缩包解压
-https://github.com/kubernetes/helm/releases
+[https://github.com/kubernetes/helm/releases](https://github.com/kubernetes/helm/releases)
 tar -xvzf $HELM.tar.gz
 mv linux-amd64/helm /usr/local/bin/helm
 
@@ -121,7 +121,7 @@ helm install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard --na
 
 下载文件deploy.yaml
 
-https://github.com/alan-et/k8s-components/blob/main/kubernetes-dashboard/deploy.yaml 
+[https://github.com/alan-et/k8s-components/blob/main/kubernetes-dashboard/deploy.yaml](https://github.com/alan-et/k8s-components/blob/main/kubernetes-dashboard/deploy.yaml ) 
 
 ####  准备证书
 ##### 创建k8s secret
@@ -443,7 +443,7 @@ spec:
 
 **安装请不要相信网上其他人的步骤操作，基本上你安装不成功**
 
-1. (我已经整理上传到了我的git)下载部署文件 https://github.com/alan-et/k8s-components/blob/main/Ingress-controller/deploy.yaml
+1. (我已经整理上传到了我的git)下载部署文件 [https://github.com/alan-et/k8s-components/blob/main/Ingress-controller/deploy.yaml](https://github.com/alan-et/k8s-components/blob/main/Ingress-controller/deploy.yaml)
 
 2. 部署
 
