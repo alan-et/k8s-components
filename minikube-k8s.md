@@ -342,7 +342,7 @@ nohup kubectl proxy --address='0.0.0.0' --accept-hosts='^*$' &
 
 然后浏览器打开
 
-`http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/`控制台
+`http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/`控制台,选择token登入
 
 
 
@@ -352,7 +352,7 @@ nohup kubectl proxy --address='0.0.0.0' --accept-hosts='^*$' &
 
 然后浏览器打开(可以用前面配置的域名访问)
 
-`https://localhost:8002/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/`控制台
+`https://localhost:8002/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/`控制台,选择token登入
 
 ##### nodeport模式访问
 
@@ -360,7 +360,7 @@ nohup kubectl proxy --address='0.0.0.0' --accept-hosts='^*$' &
 
 然后浏览器打开
 
-`https://localhost:31001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/`控制台
+`https://localhost:31001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/`控制台,选择token登入
 
 ##### 通过ingress访问
 
