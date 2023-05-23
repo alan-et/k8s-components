@@ -97,9 +97,10 @@ helm version
 
 方式二: 直接下载压缩包解压
 [https://github.com/kubernetes/helm/releases](https://github.com/kubernetes/helm/releases)
+```
 tar -xvzf $HELM.tar.gz
 mv linux-amd64/helm /usr/local/bin/helm
-
+```
 
 
 ## 安装kubernetes-dashboard
