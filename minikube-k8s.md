@@ -1,13 +1,15 @@
 ## 基于minikube安装k8s（适用于本地环境使用）
 
 1. 更新系统
+   ```
    sudo yum update -y
-
+   ```
 2. 安装 Docker 设置开机自启
-sudo yum install -y docker
-sudo systemctl start docker
-sudo systemctl enable docker
-
+   ```
+   sudo yum install -y docker
+   sudo systemctl start docker
+   sudo systemctl enable docker
+   ```
 3. 安装 kubectl
 
    kubectl 是 Kubernetes 的命令行管理工具
