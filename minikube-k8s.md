@@ -91,8 +91,11 @@ helm version
 `export PATH=$PATH:/usr/local/go/bin`
 
 保存退出，然后执行
+
 `source ~/.bash_profile`
-换一个国内能访问的代理地址： https://goproxy.cn,
+
+换一个国内能访问的代理地址： https://goproxy.cn
+
 `go env -w GOPROXY=https://goproxy.cn`
 
 方式二: 直接下载压缩包解压
