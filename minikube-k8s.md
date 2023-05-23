@@ -331,7 +331,7 @@ spec:
 只能是http访问
 
 ```
-nohup kubectl proxy
+nohup kubectl proxy &
 ```
 
 如果想外部ip可以访问执行以下命令
