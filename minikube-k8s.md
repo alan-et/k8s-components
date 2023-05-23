@@ -476,7 +476,7 @@ spec:
 
 ## 常见错误
 
-##### 出现Exiting due to PROVIDER_DOCKER_VERSION_EXIT_1: "docker version --format -:" exit status 1: template: :1:44: executing "" at <.Server.Platform.Nam...>: can't evaluate field Platform in type *types.Version
+#### 出现Exiting due to PROVIDER_DOCKER_VERSION_EXIT_1: "docker version --format -:" exit status 1: template: :1:44: executing "" at <.Server.Platform.Nam...>: can't evaluate field Platform in type *types.Version
 
 1. 删除旧docker
 
@@ -523,7 +523,7 @@ sudo yum remove docker \
 
    
 
-##### 出现execution phase certs/apiserver-kubelet-client: [certs] certificate apiserver-kubelet-client not signed by CA certificate ca: x509: certificate has expired or is not yet valid: current time 2023-05-18T03:26:25Z is after 2023-01-19T18:41:11Z
+#### 出现execution phase certs/apiserver-kubelet-client: [certs] certificate apiserver-kubelet-client not signed by CA certificate ca: x509: certificate has expired or is not yet valid: current time 2023-05-18T03:26:25Z is after 2023-01-19T18:41:11Z
 
 原因:  Kubernetes 集群的某个证书（具体来说，是 apiserver-kubelet-client）已经过期，这会阻止 Kubernetes 正常运行。证书是 Kubernetes 用来确保集群中的通信安全的重要组成部分。
 
@@ -537,7 +537,7 @@ sudo yum remove docker \
 
 
 
-##### 执行kubectl相关命令出现The connection to the server localhost:8080 was refused - did you specify the right host or port?
+#### 执行kubectl相关命令出现The connection to the server localhost:8080 was refused - did you specify the right host or port?
 
 这个问题一般出现在minikube集群模式中，A用户执行的minikube start，在root或者其他用户执行kubectl命令则提示此错误
 
