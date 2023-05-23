@@ -90,6 +90,7 @@ helm version
 `sudo tar -C /usr/local -xzf go1.20.linux-amd64.tar.gz`
 
 将 Go 语言的 bin 目录添加到 PATH 环境变量中，在/etc/profile最后面添加
+
 `export PATH=$PATH:/usr/local/go/bin`
 
 保存退出，然后执行
