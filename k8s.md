@@ -1,3 +1,4 @@
+## 生产环境部署k8s集群
 ### 环境准备
 
 1、准备三台机器
@@ -389,7 +390,8 @@ EOF
 
 正常输出
 
-![image-20230808113535849](C:\Users\zhuoxun.peng\AppData\Roaming\Typora\typora-user-images\image-20230808113535849.png)
+![image](https://github.com/alan-et/k8s-components/assets/46310121/6a0522f6-c021-4123-a2e9-d6657f2e78a3)
+
 
 **如果输出错误`getting the runtime version: rpc error: code = Unimplemented desc = unknown service runtime.v1alpha2.RuntimeService`**
 
@@ -431,7 +433,8 @@ kubeadm init  --image-repository docker.io/alan0310 --kubernetes-version v1.27.2
 
 ***其中apiserver-advertise-address参数必须和你自己的ip对应；仓库地址（--image-repository）也可以使用阿里云的registry.aliyuncs.com/google_containers***
 
-![image-20230807145208684](C:\Users\zhuoxun.peng\AppData\Roaming\Typora\typora-user-images\image-20230807145208684.png)
+![image](https://github.com/alan-et/k8s-components/assets/46310121/4a6a29be-afbe-4e55-82d4-1031d4375b54)
+
 
 4、初始化后注意提示，执行以上脚本
 
@@ -445,7 +448,8 @@ kubeadm init  --image-repository docker.io/alan0310 --kubernetes-version v1.27.2
 
 查看`kubectl get nodes`发现master还是处于NotReady状态
 
-![image-20230807145234049](C:\Users\zhuoxun.peng\AppData\Roaming\Typora\typora-user-images\image-20230807145234049.png)
+![image](https://github.com/alan-et/k8s-components/assets/46310121/a474bbd4-f2fa-440e-8cce-4d6b6292f87f)
+
 
 5、安装网络插件flannel
 
@@ -473,7 +477,8 @@ kubectl get nodes
 
 稍等一会再次查看`kubectl get nodes`已经是Ready状态了
 
-![image-20230807145256164](C:\Users\zhuoxun.peng\AppData\Roaming\Typora\typora-user-images\image-20230807145256164.png)
+![image](https://github.com/alan-et/k8s-components/assets/46310121/1aeededc-4ae3-4c9c-8917-4f572b7cd369)
+
 
 6、其他节点加入集群
 
