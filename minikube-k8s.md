@@ -448,8 +448,6 @@ spec:
 
 ### 部署Ingress Controller
 
-**安装请不要相信网上其他人的步骤操作，基本上你安装不成功**
-
 1. (我已经整理上传到了我的git)下载部署文件 [https://github.com/alan-et/k8s-components/blob/main/Ingress-controller/deploy.yaml](https://github.com/alan-et/k8s-components/blob/main/Ingress-controller/deploy.yaml)
 
 2. 部署
