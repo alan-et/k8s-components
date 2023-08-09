@@ -486,4 +486,77 @@ kubectl get nodes
 kubeadm join 172.16.10.11:6443 --token k1aitf.zf78saxhn7p4vj9g \
 	--discovery-token-ca-cert-hash sha256:5426847822104c2fd6caa92e9a7d1e5f496f318d0a2e06c6adb0e0ee3614ca30
 ```
+### 安装管理工具
+
+1、cockpit管理kubernetes集群
+
+```shell
+yum install cockpit
+yum install cockpit-docker.x86_64
+yum install cockpit-kubernetes.x86_64
+systemctl enable cockpit.socket 
+systemctl start cockpit.socket
+```
+
+登陆控制台 https://IP:9090 账号密码为服务器的登陆密码
+
+![image](https://github.com/alan-et/k8s-components/assets/46310121/2bc1fe1f-f63d-4bc0-8e9d-1fedda78ca73)
+
+
+2、kubernetes-dashboard管理集群
+
+文件地址:[https://github.com/alan-et/k8s-components/blob/main/kubernetes-dashboard/deploy-2.3.1.yaml](https://github.com/alan-et/k8s-components/blob/main/kubernetes-dashboard/deploy-2.3.1.yaml)
+
+```shell
+kubectl apply -f deploy-2.3.1.yaml
+```
+
+有自己证书的需要手动创建然后其中替换证书名称可以参考如下文章
+
+[https://blog.csdn.net/weixin_43225813/article/details/130825342](!https://blog.csdn.net/weixin_43225813/article/details/130825342)
+
+创建ServiceAccount
+
+`vim admin-user.yaml`
+
+```shell
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: admin-user
+  namespace: kubernetes-dashboard
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: admin-user
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+  - kind: ServiceAccount
+    name: admin-user
+    namespace: kubernetes-dashboard
+```
+
+```shell
+kubectl apply -f admin-user.yaml
+```
+
+获取token登陆
+
+```shell
+kubectl create token admin-user -n kubernetes-dashboard
+```
+
+浏览器打开https://IP:30001
+
+![image](https://github.com/alan-et/k8s-components/assets/46310121/e449d044-71ca-4073-96b8-37a148907335)
+
+
+![image](https://github.com/alan-et/k8s-components/assets/46310121/1b1ce8b8-91a1-4b0f-89f3-960c2944cf79)
+
 
