@@ -511,9 +511,9 @@ systemctl start cockpit.socket
 kubectl apply -f deploy-2.3.1.yaml
 ```
 
-有自己证书的需要手动创建然后其中替换证书名称可以参考如下文章
+有自己证书的需要手动创建然后替换其中的证书名称，可以参考如下文章
 
-[https://blog.csdn.net/weixin_43225813/article/details/130825342](!https://blog.csdn.net/weixin_43225813/article/details/130825342)
+[https://blog.csdn.net/weixin_43225813/article/details/130825342](https://blog.csdn.net/weixin_43225813/article/details/130825342)
 
 创建ServiceAccount
 
